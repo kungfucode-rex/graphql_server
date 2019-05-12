@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 
-mongoose.connect("mongodb+srv://root:1qaz!QAZ@132.232.105.237/test?retryWrites=true", {
+mongoose.connect("mongodb://www.kungfucode.top/test", {
     useNewUrlParser: true
 });
 mongoose.connection.once('open', () => {
@@ -21,5 +21,5 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 app.listen(8000, () => {
-    console.log('now listening for requests on port 4000');
+    console.log('now listening for requests on port 8000');
 });
